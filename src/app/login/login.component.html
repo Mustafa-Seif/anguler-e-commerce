@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="login">
+  <h1 class="text-center text-dark mb-3">Login</h1>
+
+        <form class="w-50  m-auto" #loginForm="ngForm" (ngSubmit)="handleSubmitLogin(loginForm)">
+            <div class="mt-3 mb-5">
+                <label for="exampleInputEmail1" class="form-label">Email address...</label>
+                <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp"
+                    #loginEmail="ngModel" name="loginEmail" ngModel required>
+                <div *ngIf="loginEmail.touched && !loginEmail.valid || loginForm.submitted && !loginEmail.valid" >
+                    <div *ngIf="loginEmail.errors && loginEmail.errors['required'] " id="emailLoginHelp"
+                        class="form-text text-danger">Required field </div>
+                </div>
+            </div>
+            <div class="mb-5">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" #passwordLogin="ngModel"
+                    name="passwordLogin" ngModel required>
+                    <div *ngIf="passwordLogin.touched && !passwordLogin.valid || loginForm.submitted && !passwordLogin.valid" >
+                        <div *ngIf="passwordLogin.errors && passwordLogin.errors['required'] " id="passLoginHelp"
+                            class="form-text text-danger">password required </div>
+                    </div>
+            </div>
+            <button type="submit" class="btn btn-primary py-2 px-5" [disabled]="!loginForm.valid">Login</button>
+        </form>
+        <p class="m-auto mt-2  text-center">You Dont Have Account Register? <a routerLink="/register">Register</a></p>
+
+    </div>
+</div>

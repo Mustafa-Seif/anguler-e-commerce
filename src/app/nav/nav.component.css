@@ -1,0 +1,23 @@
+.cart {
+  position: relative;
+}
+
+.count {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  color: red;
+  font-weight: bold;
+}
+
+nav {
+  background-color: #dbc587;
+  margin-bottom: 50px;
+}
+
+.notifi {
+  position: absolute;
+  right: 10px;
+  top: 60px;
+}
+/*# sourceMappingURL=nav.component.css.map */

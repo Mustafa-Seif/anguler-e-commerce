@@ -1,0 +1,27 @@
+
+  <nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" routerLink="">Souq.com</a>
+      <form class="d-flex ms-5">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-content-center">
+          <li class="nav-item  pt-2" >
+            <a routerLink="favorites" class="cart"><i class="fa-solid fa-heart text-danger"></i><span
+                class="count">{{countFav}}</span></a>
+          </li>
+          <li class="nav-item  pt-2 ms-4" (click)="clickCart()">
+            <a routerLink="cart" class="cart"><i class="fa-solid fa-cart-shopping text-dark"></i><span
+                class="count">{{countVal}}</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold ms-4" aria-current="page" routerLink="register">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold   ms-4" routerLink="login">Login</a>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <div class="alert alert-danger notifi" role="alert"  *ngIf="!loged">
+      Please login first!
+    </div>
+  </nav>

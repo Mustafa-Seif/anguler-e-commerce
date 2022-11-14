@@ -1,0 +1,11 @@
+<div class="card m-auto mt-5" style="width: 18rem;">
+    <img [src]="details.image" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{details.name}}</h5>
+      <p class="card-text">{{details.price | currency: " EG "}}</p>
+      <button *ngIf="!countStatus" href="#" class="btn btn-primary" (click)="handleCountIncrease()">Add to cart</button>
+      <button *ngIf="countStatus" href="#" class="btn btn-primary" (click)="handleCountDecrease()">Remove from cart</button>
+
+    </div>
+  </div>
+  

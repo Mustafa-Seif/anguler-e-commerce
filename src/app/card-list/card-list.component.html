@@ -1,0 +1,11 @@
+<div class="card border-2 " style="width: 18rem; ">
+  <img [src]="item.image" class="card-img-top" alt="item.id">
+  <div class="card-body">
+    <h5 class="card-title">{{item.name | uppercase}}</h5>
+    <p class="card-text">{{item.price | currency: " EG "}}</p>
+    <div *ngIf="item.count" class="text-success mb-2">In Stock</div>
+    <div *ngIf="!item.count" class="text-danger mb-2">Out of Stock</div>
+    <div class="text-end fs-5" (click)="handlefavorite(item)"><i class="fa-solid fa-heart text-danger"></i></div>
+    <button href="#" class="btn btn-primary" [disabled]="!item.count" (click)="handleShowDetails()">View product </button>
+  </div>
+</div>

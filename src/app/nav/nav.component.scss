@@ -1,0 +1,27 @@
+
+
+
+.cart{
+    position: relative;
+}
+
+
+.count{
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    color: red;
+    font-weight: bold;
+    // border: solid 1px red;
+    // border-radius: 50%;
+}
+
+nav{
+    background-color: rgb(219, 197, 135);
+    margin-bottom: 50px;
+  }
+  .notifi{
+      position: absolute;
+      right: 10px;
+      top: 60px;
+  }

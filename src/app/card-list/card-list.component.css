@@ -1,0 +1,24 @@
+.card {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  padding: 2rem 0 !important;
+}
+
+.card:hover {
+  -webkit-box-shadow: 1px 1px 20px 10px #DBC587;
+          box-shadow: 1px 1px 20px 10px #DBC587;
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.card h5 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/*# sourceMappingURL=card-list.component.css.map */

@@ -1,0 +1,22 @@
+<section  class="cart">
+    <h1>Favorites details</h1>
+    <div class="cart_warpper mt-5" >
+        <table style="width:100% " >
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th  class="text-danger">Remove</th>
+            </tr>
+            <tr *ngFor="let item of items,let i =index">
+                <th><img [src]="item.image" alt="img" width="50%"></th>
+                <th>{{item.name}}</th>
+                <th>{{item.price}}</th>
+                <th  class=""><button class="btn btn-danger" (click)="removeFavorite(i)">Remove</button> </th>
+              </tr>
+            
+        </table>
+    </div>
+</section>
+
+
