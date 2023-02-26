@@ -12,7 +12,7 @@ export class RegisterComponent implements OnInit {
   
   constructor(private router:Router) {}
   registerForm: FormGroup = new FormGroup({
-    name: new FormControl("",[Validators.required,Validators.maxLength(16),Validators.minLength(6)]),
+    name: new FormControl("",[Validators.required,Validators.maxLength(16),Validators.minLength(4)]),
     email: new FormControl("",[Validators.required, Validators.email]),
     username: new FormControl("",[Validators.required, Validators.minLength(8)]),
     password: new FormControl("", [Validators.required,
@@ -28,6 +28,7 @@ export class RegisterComponent implements OnInit {
   
 
   ngOnInit(): void {
+    console.log(this.registerForm)
     
   }
   // controls عبارة عن اختصار علشان اوصل بسرعة 

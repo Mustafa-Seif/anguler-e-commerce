@@ -12,11 +12,11 @@
           name is required
         </p>
         <p *ngIf="
-      registerForm.get('name')?.errors?.['min-length']">
+      registerForm.get('name')?.errors?.['minlength']">
           name min-length is 6
         </p>
         <p *ngIf="
-      registerForm.get('name')?.errors?.['max-length']">
+      registerForm.get('name')?.errors?.['maxlength']">
           name max-length is 16
         </p>
       </div>
@@ -33,11 +33,11 @@
           userName is required
         </p>
         <p *ngIf="
-      registerForm.get('username')?.errors?.['min-length']">
+      registerForm.get('username')?.errors?.['minlength']">
           userName min-length is 3
         </p>
         <p *ngIf="
-      registerForm.get('username')?.errors?.['max-length']">
+      registerForm.get('username')?.errors?.['maxlength']">
           userName max-length is 8
         </p>
       </div>
